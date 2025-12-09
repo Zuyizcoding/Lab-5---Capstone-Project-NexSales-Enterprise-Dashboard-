@@ -3,7 +3,6 @@ import inventoryReducer, {
   fetchInventory,
   inventoryAdapter,
 } from "../inventorySlice";
-import { store } from "../index";
 
 describe("inventorySlice", () => {
   const initialState = inventoryAdapter.getInitialState({
@@ -28,7 +27,6 @@ describe("inventorySlice", () => {
     };
 
     const actual = inventoryReducer(initialState, productAdded(newProduct));
-    const expected = inventoryAdapter.addOne(initialState, newProduct);
 
     expect(actual.entities["test-1"]).toEqual(newProduct);
     expect(actual.ids).toContain("test-1");

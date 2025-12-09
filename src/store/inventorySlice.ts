@@ -7,7 +7,6 @@ import { Product, fetchInventoryAPI } from "../api/mockData";
 import { RootState } from "./index";
 
 export const inventoryAdapter = createEntityAdapter<Product>({
-  selectId: (product) => product.id,
   sortComparer: (a, b) => a.name.localeCompare(b.name),
 });
 

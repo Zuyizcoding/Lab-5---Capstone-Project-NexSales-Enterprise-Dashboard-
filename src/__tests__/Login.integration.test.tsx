@@ -1,9 +1,7 @@
-import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "../store";
-import App from "../App";
 import Login from "../pages/Login";
 
 // Mock useNavigate

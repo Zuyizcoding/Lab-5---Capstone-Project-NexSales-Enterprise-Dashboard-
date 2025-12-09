@@ -57,7 +57,7 @@ export const RevenueChart: React.FC = () => {
         }}
       >
         {/* Grid Lines & Y-Axis Labels */}
-        {yAxisTicks.map((tick, i) => {
+        {yAxisTicks.map((tick) => {
           const y = height - padding - (tick / yAxisMax) * chartHeight;
           return (
             <g key={tick}>
